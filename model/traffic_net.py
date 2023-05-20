@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 
+
 class TrafficNet(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(TrafficNet, self).__init__()
