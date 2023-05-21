@@ -11,3 +11,12 @@ def evaluate_traffic_system(road_ids, steps):
 
     average_density = total_density / (steps * len(road_ids))
     return average_density
+
+
+def compute_average_time(traffic_simulation):
+    total_time = 0
+    total_cars = 0
+    for car in traffic_simulation.cars:
+        total_time += car.time
+        total_cars += 1
+    return total_time / total_cars if total_cars != 0 else 0
